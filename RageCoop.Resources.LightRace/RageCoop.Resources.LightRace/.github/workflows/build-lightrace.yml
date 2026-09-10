@@ -1,0 +1,26 @@
+name: Build LightRace
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '6.0.x'
+
+      - name: Build LightRace
+        run: .\RageCoop.ResourceBuilder.exe Resources/RageCoop/RageCoop.Resources.LightRace
+
+      - name: Upload Resource
+        uses: actions/upload-artifact@v4
+        with:
+          name: LightRace
+          path: bin
