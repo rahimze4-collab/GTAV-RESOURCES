@@ -1,0 +1,8 @@
+{
+  "Name": "RageCoop.Resources.LightRace",
+  "Description": "Lightweight race resource",
+  "ServerResources": [
+    "RageCoop.Resources.LightRace/RageCoop.Resources.LightRace.csproj"
+  ],
+  "Version": "1.0"
+}
